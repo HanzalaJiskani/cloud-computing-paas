@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teacher Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            EduConnect
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">
+                Registration
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <section class="hero dashboard-hero">
+
+            <p class="badge">
+                Teacher Panel
+            </p>
+
+            <h1>
+                Student Dashboard
+            </h1>
+
+            <p>
+                View students registered through the website.
+            </p>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <span>
+                    Total Students
+                </span>
+
+                <strong id="totalStudents">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    System
+                </span>
+
+                <strong>
+                    Odoo
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    Status
+                </span>
+
+                <strong class="online">
+                    Connected
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>
+                        Registered Students
+                    </h2>
+
+                    <p>
+                        Data retrieved from Odoo.
+                    </p>
+                </div>
+
+                <button
+                    class="secondary-button"
+                    onclick="loadStudents()"
+                >
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search students..."
+                >
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Phone
+                            </th>
+
+                            <th>
+                                Course
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentsTable">
+
+                        <tr>
+
+                            <td colspan="4">
+                                Loading students...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            EduConnect Showcase Project
+        </p>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
+
