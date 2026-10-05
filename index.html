@@ -3,10 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+
+    <title>Student Registration</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <p>Welcome to my new website!</p>
+
+    <nav class="navbar">
+        <div class="logo">EduConnect</div>
+
+        <div class="nav-links">
+            <a href="index.html">Registration</a>
+            <a href="dashboard.html">Teacher Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="badge">Student Management System</p>
+
+            <h1>Student Registration</h1>
+
+            <p>
+                Register a student and store their information securely
+                in the school's Odoo system.
+            </p>
+        </section>
+
+        <section class="card">
+
+            <h2>Register Student</h2>
+
+            <form id="studentForm">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter student's full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="student@example.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+92 300 1234567"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="Computer Science">
+                            Computer Science
+                        </option>
+                        <option value="Business Administration">
+                            Business Administration
+                        </option>
+                        <option value="Software Engineering">
+                            Software Engineering
+                        </option>
+                        <option value="Information Technology">
+                            Information Technology
+                        </option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Register Student
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>EduConnect Showcase Project</p>
+    </footer>
+
+    <script src="app.js"></script>
+
 </body>
 </html>
